@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>To-do App</title>
+  <style>
+    body { font-family: Arial; background: #f8f9fa; padding: 2em; }
+    .box { background: #fff; padding: 1em; border-radius: 8px; box-shadow: 0 0 5px #ccc; margin-bottom: 1em; max-width: 500px; }
+    input, select, button { display: block; width: 100%; margin: 0.5em 0; padding: 0.5em; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1em; }
+    th, td { border: 1px solid #ddd; padding: 0.5em; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+
+<h2>📝 To-do App mit Firebase</h2>
+
+<!-- Login -->
+<div id="login-box" class="box">
+  <input type="email" id="email" placeholder="E-Mail">
+  <input type="password" id="password" placeholder="Passwort">
+  <button id="login-btn">Login</button>
+  <p id="login-error" style="color:red;"></p>
+</div>
+
+<!-- To-do Eingabe -->
+<div id="todo-box" class="box hidden">
+  <form id="todo-form">
+    <input id="title" placeholder="Titel" required>
+    <select id="category">
+      <option value="Dringend & Wichtig">Dringend & Wichtig</option>
+      <option value="Wichtig">Wichtig</option>
+      <option value="Dringend">Dringend</option>
+      <option value="Sonstiges">Sonstiges</option>
+    </select>
+    <input id="duration" type="number" placeholder="Dauer (Minuten)" required>
+    <select id="status">
+      <option value="offen">Offen</option>
+      <option value="in arbeit">In Arbeit</option>
+      <option value="erledigt">Erledigt</option>
+    </select>
+    <button type="submit">Aufgabe speichern</button>
+  </form>
+  <button id="show-tasks">📋 Aufgaben anzeigen</button>
+</div>
+
+<!-- Aufgabenliste -->
+<div id="task-list" class="box hidden">
+  <h3>Meine Aufgaben</h3>
+  <table id="task-table"></table>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
