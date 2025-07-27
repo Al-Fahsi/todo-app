@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/fireba
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import { getFirestore, collection, addDoc, query, where, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-// 🔧 Ersetze hier mit deinen echten Firebase-Daten
+// Firebase-Daten
 const firebaseConfig = {
   apiKey: "AIzaSyBcGJGAsa9mfYhpLYq48P9gkFxJ5sv-2h8",
   authDomain: "todo-app-4dbf4.firebaseapp.com",
